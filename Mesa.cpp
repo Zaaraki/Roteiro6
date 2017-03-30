@@ -8,24 +8,25 @@
 
 using namespace std;
 
-void Mesa::adPedido(Pedido *p, int num, string desc, int qtd, float preco) {
+void Mesa::adPedido(int num, string desc, int qtd, float preco) {
     int i=0;
     if(i>10){
         cout<<"Erro"<<endl;
     }
     else {
+
         p[i].setPedido(num, desc, qtd, preco);
         i++;
     }
 }
 
-void Mesa::zeraPedido(Pedido *p) {
+void Mesa::zeraPedido() {
     for (int i = 0; i < 10; ++i) {
         p[i].setPedido(0, "null", 0, 0);
     }
 }
 
-float Mesa::calcTotal(Pedido *p) {
+float Mesa::calcTotal() {
     int total=0;
     for (int i = 0; i < 10; ++i) {
         total=total+p->getPreco();

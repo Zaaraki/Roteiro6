@@ -15,9 +15,9 @@ private:
 
 
 public:
-    void adPedido(Pedido p[], int num, string desc, int qtd, float preco);
-    void zeraPedido(Pedido p[]);
-    float calcTotal(Pedido p[]);
+    void adPedido(int num, string desc, int qtd, float preco);
+    void zeraPedido();
+    float calcTotal();
 
 
 };

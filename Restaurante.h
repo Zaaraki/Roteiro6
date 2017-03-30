@@ -12,8 +12,8 @@ class Restaurante {
 private:
     Mesa m[10];
 public:
-    void adPedido(Mesa m[]);
-    void calcTotalRes();
+    void adPedido(int num, string desc, int qtd, float preco);
+    float calcTotalRes();
 
 };
 

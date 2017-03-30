@@ -10,6 +10,10 @@
 using namespace std;
 
 int main(){
+    Restaurante r;
+    Mesa m;
+    Pedido p;
 
+    cout << "teste";
     return 0;
 }

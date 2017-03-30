@@ -5,8 +5,6 @@
 #ifndef ROTEIRO6_RELOGIO_H
 #define ROTEIRO6_RELOGIO_H
 
-#include <ostream>
-
 const int MAX_SEG=60;
 const int MAX_MIN=60;
 const int MAX_HORA=24;

@@ -8,19 +8,19 @@
 
 using namespace std;
 
-void Restaurante::adPedido(int num, string desc, int qtd, float preco) {
-    int i=0;
-    if(i>10){
+void Restaurante::adPedido(int mesa, int num, string desc, int qtd, float preco) {
+
+    if(mesa>10){
         cout<<"Erro"<<endl;
     }
     else {
-        m[i].adPedido(num, desc, qtd, preco);
-        i++;
+        m[mesa].adPedido(num, desc, qtd, preco);
+
     }
 }
 
 float Restaurante::calcTotalRes() {
-    float total;
+    float total=0;
     for(int i=0; i<10; i++){
         total=total + m[i].calcTotal();
     }

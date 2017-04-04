@@ -10,28 +10,47 @@
 using namespace std;
 
 int main(){
+    //Criando restaurante
     Restaurante r;
-    Mesa m[10];
-    Pedido p;
 
-    int numMesa;
+    //Criando as mesas
+    Mesa m1;
+    Mesa m2;
 
-    cout << "Adicionando um pedido"<<endl;
-    r.adPedido(1, 1, "Suco", 2, 20);
+    //Adicionando as mesas no restaurante
+    r.adMesa(m1);
+    r.adMesa(m2);
 
-    numMesa=2;
-    m[numMesa].adPedido(3, "Comida", 1, 30);
+    cout << "Adicionando pedidos"<<endl;
 
-    numMesa=3;
-    m[numMesa].adPedido(5, "Comida", 3, 50);
+    Pedido p1 (1, "Item 1", 1, 100.f);
+    Pedido p2 (2, "Item 2", 5, 400.f);
+    Pedido p3 (3, "Item 3", 2, 30.f);
+    Pedido p4 (4, "Item 4", 9, 20.f);
 
-    cout << "Total da mesa: ";
-    m[3].calcTotal();
-    cout << endl;
+    cout << "Adicionando pedidos na mesa 1"<<endl;
 
-    cout << "Total do restaurante: ";
-    r.calcTotalRes();
-    cout << endl;
+    r.adPedido(0, p1);
+    r.adPedido(0, p2);
+
+    cout << "Adicionando pedidos na mesa 2"<<endl;
+
+    r.adPedido(1, p3);
+    r.adPedido(1, p4);
+
+    cout<<"Total de vendas do restaurante: "<< r.calcTotalRes() << endl;
+
+    cout<< "Total da mesa 1: " << m1.calcTotal() << endl;
+    cout<< "Total da mesa 2: " << m2.calcTotal() << endl;
+
+    cout << "Limpar pedidos da mesa 1"<<endl;
+    r.limpaMesa(0);
+
+    cout << "Limpar pedidos da mesa 2"<<endl;
+    r.limpaMesa(1);
+
+    cout<< "Total da mesa 1: " << m1.calcTotal() << endl;
+    cout<< "Total da mesa 2: " << m2.calcTotal() << endl;
 
 
 

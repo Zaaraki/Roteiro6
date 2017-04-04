@@ -6,16 +6,18 @@
 #define ROTEIRO6_MESA_H
 
 #include "Pedido.h"
+#include <vector>
+
 using namespace std;
 
 class Mesa{
 
 private:
-    Pedido p[10];
+    vector<Pedido> pedidos;
 
 
 public:
-    void adPedido(int num, string desc, int qtd, float preco);
+    void adPedido(Pedido pedido);
     void zeraPedido();
     float calcTotal();
 

@@ -1,4 +1,4 @@
-//
+ //
 // Created by amaro on 30/03/2017.
 //
 
@@ -8,29 +8,21 @@
 
 using namespace std;
 
-void Mesa::adPedido(int num, string desc, int qtd, float preco) {
-    int i=0;
-    if(i>10){
-        cout<<"Erro"<<endl;
-    }
-    else {
-
-        p[i].setPedido(num, desc, qtd, preco);
-        i++;
-    }
+void Mesa::adPedido(Pedido pedido) {
+	pedidos.push_back(pedido);
+    
 }
 
 void Mesa::zeraPedido() {
-    for (int i = 0; i < 10; ++i) {
-        p[i].setPedido(0, "null", 0, 0);
-    }
+    pedidos.clear();
 }
 
 float Mesa::calcTotal() {
-    int total=0;
-    for (int i = 0; i < 10; ++i) {
-        total=total+p->getPreco();
+    float total=0;
+//    for(auto &o : pedidos)
+//    	total+= o.getPreco() * o.getQtd();
+    for(int i=0; i<pedidos.size(); i++){
+        total+= pedidos[i].getQtd() * pedidos[i].getPreco();
     }
-
     return total;
 }

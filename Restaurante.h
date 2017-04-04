@@ -10,10 +10,12 @@ using namespace std;
 
 class Restaurante {
 private:
-    Mesa m[10];
+    vector<Mesa> mesas;
 public:
-    void adPedido(int mesa, int num, string desc, int qtd, float preco);
-    float calcTotalRes();
+    void adMesa(Mesa mesa);
+    void adPedido(int numMesa, Pedido pedido);
+    double calcTotalRes();
+    void limpaMesa(int index);
 
 };
 

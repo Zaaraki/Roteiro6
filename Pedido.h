@@ -16,17 +16,13 @@ private:
 
 public:
 
-    void setPedido(int num, string desc, int qtd, float preco);
+    Pedido(int num, string desc, int qtd, float preco);
 
+    
     int getNum();
-    string getDesc();
     int getQtd();
     float getPreco();
 
-    void setNum(int num);
-    void setDesc(string desc);
-    void setQtd(int qtd);
-    void setPreco(float preco);
 };
 
 
